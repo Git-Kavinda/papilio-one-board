@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Oct 10 10:25:29 2024
+# Process ID: 271
+# Log file: /mnt/b/papilio-one-projects/Troubleshoot/Troubleshoot/planAhead_run_3/planAhead.log
+# Journal file: /mnt/b/papilio-one-projects/Troubleshoot/Troubleshoot/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /mnt/b/papilio-one-projects/Troubleshoot/Troubleshoot/pa.fromNetlist.tcl
+startgroup
+set_property package_pin P17 [get_ports LED]
+endgroup
+set_property pulltype PULLDOWN [get_ports [list LED]]
+save_constraints

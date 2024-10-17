@@ -1,9 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Oct 10 11:36:14 2024
+// Written by: Map P.20131013 on Wed Oct 16 23:49:15 2024
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "Switch" LOCATE = SITE "P4" LEVEL 1;
 COMP "LED" LOCATE = SITE "P17" LEVEL 1;
-COMP "LED1" LOCATE = SITE "P16" LEVEL 1;
 SCHEMATIC END;
 

@@ -9,25 +9,22 @@ Target Device  : xc3s500e
 Target Package : vq100
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 10 11:36:11 2024
+Mapped Date    : Wed Oct 16 23:49:08 2024
 
 Mapping design into LUTs...
-WARNING:MapLib:23 - Short on signal LED1 detected.
-WARNING:MapLib:23 - Short on signal LED1 detected.
-WARNING:MapLib:23 - Short on signal LED1 detected.
-WARNING:MapLib:23 - Short on signal LED1 detected.
-WARNING:MapLib:23 - Short on signal LED1 detected.
 Running directed packing...
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp LED is
+   set but the tri state is not configured. 
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    5
+Number of warnings:    1
 Logic Utilization:
 Logic Distribution:
     Number of Slices containing only related logic:       0 out of       0   0%
@@ -35,9 +32,11 @@ Logic Distribution:
       *See NOTES below for an explanation of the effects of unrelated logic.
   Number of bonded IOBs:                  2 out of      66    3%
 
+Average Fanout of Non-Clock Nets:                1.00
+
 Peak Memory Usage:  565 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   3 secs 
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 

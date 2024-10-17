@@ -107,7 +107,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/mnt/b/papilio-one-projects/Troubleshoot/Troubleshoot/TEST_LED.vhd" in Library work.
+Compiling vhdl file "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.vhd" in Library work.
 Entity <test_led> compiled.
 Entity <test_led> (Architecture <test_led_arch>) compiled.
 
@@ -131,7 +131,7 @@ Entity <TEST_LED> analyzed. Unit <TEST_LED> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <TEST_LED>.
-    Related source file is "/mnt/b/papilio-one-projects/Troubleshoot/Troubleshoot/TEST_LED.vhd".
+    Related source file is "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.vhd".
 Unit <TEST_LED> synthesized.
 
 
@@ -192,14 +192,12 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 2
+# IOs                              : 16
 
 Cell Usage :
-# BELS                             : 2
-#      GND                         : 1
-#      VCC                         : 1
-# IO Buffers                       : 2
-#      OBUF                        : 2
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
 =========================================================================
 
 Device utilization summary:
@@ -208,8 +206,8 @@ Device utilization summary:
 Selected Device : 3s500evq100-4 
 
  Number of Slices:                        0  out of   4656     0%  
- Number of IOs:                           2
- Number of bonded IOBs:                   2  out of     66     3%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of     66    24%  
 
 ---------------------------
 Partition Resource Summary:
@@ -242,22 +240,40 @@ Speed Grade: -4
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 4.910ns
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.910ns (Levels of Logic = 2)
+  Source:            Switch<7> (PAD)
+  Destination:       LED<7> (PAD)
+
+  Data Path: Switch<7> to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  Switch_7_IBUF (LED_7_OBUF)
+     OBUF:I->O                 3.272          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.910ns (4.490ns logic, 0.420ns route)
+                                       (91.4% logic, 8.6% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 15.98 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 16.45 secs
  
 --> 
 
 
-Total memory usage is 496692 kilobytes
+Total memory usage is 496836 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

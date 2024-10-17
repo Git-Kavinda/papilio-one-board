@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file '3s500e.nph' in environment
    "TEST_LED" is an NCD, version 3.2, device xc3s500e, package vq100, speed -4
 Opened constraints file TEST_LED.pcf.
 
-Thu Oct 10 11:37:00 2024
+Wed Oct 16 23:50:17 2024
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No TEST_LED.ncd 
 
@@ -90,7 +90,10 @@ There were 0 CONFIG constraint(s) processed from TEST_LED.pcf.
 
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp LED is
+   set but the tri state is not configured. 
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "TEST_LED.bit".
 Bitstream generation is complete.

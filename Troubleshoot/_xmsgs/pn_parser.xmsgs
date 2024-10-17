@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/Troubleshoot/TEST_LED.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

@@ -2,9 +2,9 @@
 # PlanAhead Generated physical constraints 
 
 NET "LED" LOC = P17;
-NET "LED1" LOC = P16;
+NET "Switch" LOC = P4;
 
 # PlanAhead Generated IO constraints 
 
 NET "LED" PULLDOWN;
-NET "LED1" PULLDOWN;
+#NET "LED1" PULLDOWN;

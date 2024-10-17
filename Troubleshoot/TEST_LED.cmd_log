@@ -16,3 +16,12 @@ map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o TEST_LE
 par -w -intstyle ise -ol high -t 1 TEST_LED_map.ncd TEST_LED.ncd TEST_LED.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TEST_LED.twx TEST_LED.ncd -o TEST_LED.twr TEST_LED.pcf -ucf TEST_LED.ucf 
 bitgen -intstyle ise -f TEST_LED.ut TEST_LED.ncd 
+xst -intstyle ise -ifn "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.xst" -ofn "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TEST_LED.ucf -p xc3s500e-vq100-4 TEST_LED.ngc TEST_LED.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TEST_LED.ucf -p xc3s500e-vq100-4 TEST_LED.ngc TEST_LED.ngd  
+map -intstyle ise -p xc3s500e-vq100-4 -cm area -ir off -pr off -c 100 -o TEST_LED_map.ncd TEST_LED.ngd TEST_LED.pcf 
+par -w -intstyle ise -ol high -t 1 TEST_LED_map.ncd TEST_LED.ncd TEST_LED.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml TEST_LED.twx TEST_LED.ncd -o TEST_LED.twr TEST_LED.pcf -ucf TEST_LED.ucf 
+bitgen -intstyle ise -f TEST_LED.ut TEST_LED.ncd 
+xst -intstyle ise -ifn "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.xst" -ofn "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.syr" 
+xst -intstyle ise -ifn "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.xst" -ofn "/mnt/b/ACCMT-Projects/papilio-one-board/Troubleshoot/TEST_LED.syr" 

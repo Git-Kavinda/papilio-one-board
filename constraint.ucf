@@ -1,0 +1,59 @@
+# Crystal Clock - use 32MHz onboard oscillator
+NET "clk" LOC = "P89" | IOSTANDARD = LVCMOS25 | PERIOD = 31.25ns ;
+# Wing1 Column A
+NET "W1A<0>" LOC = "P18" ; # LogicStart 7Seg anode(0)
+NET "W1A<1>" LOC = "P23" ; # LogicStart 7seg Decimal Point
+NET "W1A<2>" LOC = "P26" ; # LogicStart 7Seg anode(1)
+NET "W1A<3>" LOC = "P33" ; # LogicStart 7seg segment E
+NET "W1A<4>" LOC = "P35" ; # LogicStart 7seg segment F
+NET "W1A<5>" LOC = "P40" ; # LogicStart 7seg segment C
+NET "W1A<6>" LOC = "P53" ; # LogicStart 7seg segment D
+NET "W1A<7>" LOC = "P57" ; # LogicStart 7seg segment A
+NET "W1A<8>" LOC = "P60" ; # LogicStart 7seg anode(2)
+NET "W1A<9>" LOC = "P62" ; # LogicStart 7seg segment G
+NET "W1A<10>" LOC = "P65" ; # LogicStart 7seg segment B
+NET "W1A<11>" LOC = "P67" ; # LogicStart 7seg anode(3)
+NET "W1A<12>" LOC = "P70" ; # LogicStart A2D SPI_CS
+NET "W1A<13>" LOC = "P79" ; # LogicStart A2D SPI_DOUT
+NET "W1A<14>" LOC = "P84" ; # LogicStart A2D SPI_DIN
+NET "W1A<15>" LOC = "P86" ; # LogicStart A2D SPI_SCLK
+# Wing1 Column B
+NET "W1B<0>" LOC = "P85" ; # LogicStart vsync
+NET "W1B<1>" LOC = "P83" ; # LogicStart hsync
+NET "W1B<2>" LOC = "P78" ; # LogicStart blue1
+NET "W1B<3>" LOC = "P71" ; # LogicStart blue2
+NET "W1B<4>" LOC = "P68" ; # LogicStart green0
+NET "W1B<5>" LOC = "P66" ; # LogicStart green1
+NET "W1B<6>" LOC = "P63" ; # LogicStart green2
+NET "W1B<7>" LOC = "P61" ; # LogicStart red0
+NET "W1B<8>" LOC = "P58" ; # LogicStart red1
+NET "W1B<9>" LOC = "P54" ; # LogicStart red2
+NET "audio" LOC = "P41" ; # LogicStart audio
+NET "W1B<11>" LOC = "P36" ; # LogicStart joystick right
+NET "W1B<12>" LOC = "P34" ; # LogicStart joystick left
+NET "W1B<13>" LOC = "P32" ; # LogicStart joystick down
+NET "W1B<14>" LOC = "P25" ; # LogicStart Joystick up
+NET "W1B<15>" LOC = "P22" ; # LogicStart Joystick Select
+# Wing2 Column C
+NET "W2C<0>" LOC = "P91" ; # LogicStart Switch 7
+NET "W2C<1>" LOC = "P92" ; # LogicStart Switch 6
+NET "W2C<2>" LOC = "P94" ; # LogicStart Switch 5
+NET "W2C<3>" LOC = "P95" ; # LogicStart Switch 4
+NET "W2C<4>" LOC = "P98" ; # LogicStart Switch 3
+NET "W2C<5>" LOC = "P2" ; # LogicStart Switch 2
+NET "W2C<6>" LOC = "P3" ; # LogicStart Switch 1
+NET "W2C<7>" LOC = "P4" ; # LogicStart Switch 0
+NET "W2C<8>" LOC = "P5" ; # LogicStart LED 7
+NET "W2C<9>" LOC = "P9" ; # LogicStart LED 6
+NET "W2C<10>" LOC = "P10" ; # LogicStart LED 5
+NET "W2C<11>" LOC = "P11" ; # LogicStart LED 4
+NET "W2C<12>" LOC = "P12" ; # LogicStart LED 3
+NET "W2C<13>" LOC = "P15" ; # LogicStart LED 2
+NET "W2C<14>" LOC = "P16" ; # LogicStart LED 1
+NET "W2C<15>" LOC = "P17" ; # LogicStart LED 0
+## RS232
+NET "rx" LOC = "P88" | IOSTANDARD = LVCMOS25 ;
+NET "tx" LOC = "P90" | IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = SLOW ;
+
+#Pull down neccsory connections
+#NET "mybus[*]" PULLDOWN;

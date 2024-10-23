@@ -1,0 +1,801 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s500e,vq100,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 300 paths analyzed, 58 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.351ns.
+--------------------------------------------------------------------------------
+
+Paths for end point counter_map/reg_23 (SLICE_X17Y88.CIN), 22 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     26.899ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_0 (FF)
+  Destination:          counter_map/reg_23 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.351ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_0 to counter_map/reg_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.XQ      Tcko                  0.591   counter_map/reg<0>
+                                                       counter_map/reg_0
+    SLICE_X17Y77.F4      net (fanout=2)        0.416   counter_map/reg<0>
+    SLICE_X17Y77.COUT    Topcyf                1.162   counter_map/reg<0>
+                                                       counter_map/Mcount_reg_lut<0>_INV_0
+                                                       counter_map/Mcount_reg_cy<0>
+                                                       counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.COUT    Tbyp                  0.118   counter_map/reg<2>
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.COUT    Tbyp                  0.118   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.COUT    Tbyp                  0.118   counter_map/reg<20>
+                                                       counter_map/Mcount_reg_cy<20>
+                                                       counter_map/Mcount_reg_cy<21>
+    SLICE_X17Y88.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<21>
+    SLICE_X17Y88.CLK     Tcinck                1.002   counter_map/reg<22>
+                                                       counter_map/Mcount_reg_cy<22>
+                                                       counter_map/Mcount_reg_xor<23>
+                                                       counter_map/reg_23
+    -------------------------------------------------  ---------------------------
+    Total                                      4.351ns (3.935ns logic, 0.416ns route)
+                                                       (90.4% logic, 9.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.925ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_2 (FF)
+  Destination:          counter_map/reg_23 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.325ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_2 to counter_map/reg_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y78.XQ      Tcko                  0.591   counter_map/reg<2>
+                                                       counter_map/reg_2
+    SLICE_X17Y78.F2      net (fanout=2)        0.508   counter_map/reg<2>
+    SLICE_X17Y78.COUT    Topcyf                1.162   counter_map/reg<2>
+                                                       counter_map/reg<2>_rt
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.COUT    Tbyp                  0.118   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.COUT    Tbyp                  0.118   counter_map/reg<20>
+                                                       counter_map/Mcount_reg_cy<20>
+                                                       counter_map/Mcount_reg_cy<21>
+    SLICE_X17Y88.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<21>
+    SLICE_X17Y88.CLK     Tcinck                1.002   counter_map/reg<22>
+                                                       counter_map/Mcount_reg_cy<22>
+                                                       counter_map/Mcount_reg_xor<23>
+                                                       counter_map/reg_23
+    -------------------------------------------------  ---------------------------
+    Total                                      4.325ns (3.817ns logic, 0.508ns route)
+                                                       (88.3% logic, 11.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.001ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_1 (FF)
+  Destination:          counter_map/reg_23 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.249ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_1 to counter_map/reg_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.YQ      Tcko                  0.587   counter_map/reg<0>
+                                                       counter_map/reg_1
+    SLICE_X17Y77.G2      net (fanout=2)        0.479   counter_map/reg<1>
+    SLICE_X17Y77.COUT    Topcyg                1.001   counter_map/reg<0>
+                                                       counter_map/reg<1>_rt
+                                                       counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.COUT    Tbyp                  0.118   counter_map/reg<2>
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.COUT    Tbyp                  0.118   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.COUT    Tbyp                  0.118   counter_map/reg<20>
+                                                       counter_map/Mcount_reg_cy<20>
+                                                       counter_map/Mcount_reg_cy<21>
+    SLICE_X17Y88.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<21>
+    SLICE_X17Y88.CLK     Tcinck                1.002   counter_map/reg<22>
+                                                       counter_map/Mcount_reg_cy<22>
+                                                       counter_map/Mcount_reg_xor<23>
+                                                       counter_map/reg_23
+    -------------------------------------------------  ---------------------------
+    Total                                      4.249ns (3.770ns logic, 0.479ns route)
+                                                       (88.7% logic, 11.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_map/reg_21 (SLICE_X17Y87.CIN), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.017ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_0 (FF)
+  Destination:          counter_map/reg_21 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.233ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_0 to counter_map/reg_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.XQ      Tcko                  0.591   counter_map/reg<0>
+                                                       counter_map/reg_0
+    SLICE_X17Y77.F4      net (fanout=2)        0.416   counter_map/reg<0>
+    SLICE_X17Y77.COUT    Topcyf                1.162   counter_map/reg<0>
+                                                       counter_map/Mcount_reg_lut<0>_INV_0
+                                                       counter_map/Mcount_reg_cy<0>
+                                                       counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.COUT    Tbyp                  0.118   counter_map/reg<2>
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.COUT    Tbyp                  0.118   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CLK     Tcinck                1.002   counter_map/reg<20>
+                                                       counter_map/Mcount_reg_cy<20>
+                                                       counter_map/Mcount_reg_xor<21>
+                                                       counter_map/reg_21
+    -------------------------------------------------  ---------------------------
+    Total                                      4.233ns (3.817ns logic, 0.416ns route)
+                                                       (90.2% logic, 9.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.043ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_2 (FF)
+  Destination:          counter_map/reg_21 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.207ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_2 to counter_map/reg_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y78.XQ      Tcko                  0.591   counter_map/reg<2>
+                                                       counter_map/reg_2
+    SLICE_X17Y78.F2      net (fanout=2)        0.508   counter_map/reg<2>
+    SLICE_X17Y78.COUT    Topcyf                1.162   counter_map/reg<2>
+                                                       counter_map/reg<2>_rt
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.COUT    Tbyp                  0.118   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CLK     Tcinck                1.002   counter_map/reg<20>
+                                                       counter_map/Mcount_reg_cy<20>
+                                                       counter_map/Mcount_reg_xor<21>
+                                                       counter_map/reg_21
+    -------------------------------------------------  ---------------------------
+    Total                                      4.207ns (3.699ns logic, 0.508ns route)
+                                                       (87.9% logic, 12.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.119ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_1 (FF)
+  Destination:          counter_map/reg_21 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.131ns (Levels of Logic = 11)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_1 to counter_map/reg_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.YQ      Tcko                  0.587   counter_map/reg<0>
+                                                       counter_map/reg_1
+    SLICE_X17Y77.G2      net (fanout=2)        0.479   counter_map/reg<1>
+    SLICE_X17Y77.COUT    Topcyg                1.001   counter_map/reg<0>
+                                                       counter_map/reg<1>_rt
+                                                       counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.COUT    Tbyp                  0.118   counter_map/reg<2>
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.COUT    Tbyp                  0.118   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<19>
+    SLICE_X17Y87.CLK     Tcinck                1.002   counter_map/reg<20>
+                                                       counter_map/Mcount_reg_cy<20>
+                                                       counter_map/Mcount_reg_xor<21>
+                                                       counter_map/reg_21
+    -------------------------------------------------  ---------------------------
+    Total                                      4.131ns (3.652ns logic, 0.479ns route)
+                                                       (88.4% logic, 11.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_map/reg_19 (SLICE_X17Y86.CIN), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.135ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_0 (FF)
+  Destination:          counter_map/reg_19 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.115ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_0 to counter_map/reg_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.XQ      Tcko                  0.591   counter_map/reg<0>
+                                                       counter_map/reg_0
+    SLICE_X17Y77.F4      net (fanout=2)        0.416   counter_map/reg<0>
+    SLICE_X17Y77.COUT    Topcyf                1.162   counter_map/reg<0>
+                                                       counter_map/Mcount_reg_lut<0>_INV_0
+                                                       counter_map/Mcount_reg_cy<0>
+                                                       counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.COUT    Tbyp                  0.118   counter_map/reg<2>
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CLK     Tcinck                1.002   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_xor<19>
+                                                       counter_map/reg_19
+    -------------------------------------------------  ---------------------------
+    Total                                      4.115ns (3.699ns logic, 0.416ns route)
+                                                       (89.9% logic, 10.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.161ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_2 (FF)
+  Destination:          counter_map/reg_19 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.089ns (Levels of Logic = 9)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_2 to counter_map/reg_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y78.XQ      Tcko                  0.591   counter_map/reg<2>
+                                                       counter_map/reg_2
+    SLICE_X17Y78.F2      net (fanout=2)        0.508   counter_map/reg<2>
+    SLICE_X17Y78.COUT    Topcyf                1.162   counter_map/reg<2>
+                                                       counter_map/reg<2>_rt
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CLK     Tcinck                1.002   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_xor<19>
+                                                       counter_map/reg_19
+    -------------------------------------------------  ---------------------------
+    Total                                      4.089ns (3.581ns logic, 0.508ns route)
+                                                       (87.6% logic, 12.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.237ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               counter_map/reg_1 (FF)
+  Destination:          counter_map/reg_19 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.013ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: counter_map/reg_1 to counter_map/reg_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.YQ      Tcko                  0.587   counter_map/reg<0>
+                                                       counter_map/reg_1
+    SLICE_X17Y77.G2      net (fanout=2)        0.479   counter_map/reg<1>
+    SLICE_X17Y77.COUT    Topcyg                1.001   counter_map/reg<0>
+                                                       counter_map/reg<1>_rt
+                                                       counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<1>
+    SLICE_X17Y78.COUT    Tbyp                  0.118   counter_map/reg<2>
+                                                       counter_map/Mcount_reg_cy<2>
+                                                       counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<3>
+    SLICE_X17Y79.COUT    Tbyp                  0.118   counter_map/reg<4>
+                                                       counter_map/Mcount_reg_cy<4>
+                                                       counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<5>
+    SLICE_X17Y80.COUT    Tbyp                  0.118   counter_map/reg<6>
+                                                       counter_map/Mcount_reg_cy<6>
+                                                       counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<7>
+    SLICE_X17Y81.COUT    Tbyp                  0.118   counter_map/reg<8>
+                                                       counter_map/Mcount_reg_cy<8>
+                                                       counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<9>
+    SLICE_X17Y82.COUT    Tbyp                  0.118   counter_map/reg<10>
+                                                       counter_map/Mcount_reg_cy<10>
+                                                       counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<11>
+    SLICE_X17Y83.COUT    Tbyp                  0.118   counter_map/reg<12>
+                                                       counter_map/Mcount_reg_cy<12>
+                                                       counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<13>
+    SLICE_X17Y84.COUT    Tbyp                  0.118   counter_map/reg<14>
+                                                       counter_map/Mcount_reg_cy<14>
+                                                       counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<15>
+    SLICE_X17Y85.COUT    Tbyp                  0.118   counter_map/reg<16>
+                                                       counter_map/Mcount_reg_cy<16>
+                                                       counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CIN     net (fanout=1)        0.000   counter_map/Mcount_reg_cy<17>
+    SLICE_X17Y86.CLK     Tcinck                1.002   counter_map/reg<18>
+                                                       counter_map/Mcount_reg_cy<18>
+                                                       counter_map/Mcount_reg_xor<19>
+                                                       counter_map/reg_19
+    -------------------------------------------------  ---------------------------
+    Total                                      4.013ns (3.534ns logic, 0.479ns route)
+                                                       (88.1% logic, 11.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point counter_map/reg_0 (SLICE_X17Y77.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_map/reg_0 (FF)
+  Destination:          counter_map/reg_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 31.250ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: counter_map/reg_0 to counter_map/reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y77.XQ      Tcko                  0.473   counter_map/reg<0>
+                                                       counter_map/reg_0
+    SLICE_X17Y77.F4      net (fanout=2)        0.333   counter_map/reg<0>
+    SLICE_X17Y77.CLK     Tckf        (-Th)    -0.801   counter_map/reg<0>
+                                                       counter_map/Mcount_reg_lut<0>_INV_0
+                                                       counter_map/Mcount_reg_xor<0>
+                                                       counter_map/reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.607ns (1.274ns logic, 0.333ns route)
+                                                       (79.3% logic, 20.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_map/reg_4 (SLICE_X17Y79.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.607ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_map/reg_4 (FF)
+  Destination:          counter_map/reg_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.607ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 31.250ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: counter_map/reg_4 to counter_map/reg_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y79.XQ      Tcko                  0.473   counter_map/reg<4>
+                                                       counter_map/reg_4
+    SLICE_X17Y79.F4      net (fanout=2)        0.333   counter_map/reg<4>
+    SLICE_X17Y79.CLK     Tckf        (-Th)    -0.801   counter_map/reg<4>
+                                                       counter_map/reg<4>_rt
+                                                       counter_map/Mcount_reg_xor<4>
+                                                       counter_map/reg_4
+    -------------------------------------------------  ---------------------------
+    Total                                      1.607ns (1.274ns logic, 0.333ns route)
+                                                       (79.3% logic, 20.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point counter_map/reg_12 (SLICE_X17Y83.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.618ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               counter_map/reg_12 (FF)
+  Destination:          counter_map/reg_12 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.618ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 31.250ns
+  Destination Clock:    clk_BUFGP rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: counter_map/reg_12 to counter_map/reg_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y83.XQ      Tcko                  0.473   counter_map/reg<12>
+                                                       counter_map/reg_12
+    SLICE_X17Y83.F3      net (fanout=2)        0.344   counter_map/reg<12>
+    SLICE_X17Y83.CLK     Tckf        (-Th)    -0.801   counter_map/reg<12>
+                                                       counter_map/reg<12>_rt
+                                                       counter_map/Mcount_reg_xor<12>
+                                                       counter_map/reg_12
+    -------------------------------------------------  ---------------------------
+    Total                                      1.618ns (1.274ns logic, 0.344ns route)
+                                                       (78.7% logic, 21.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 31.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 29.654ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 31.250ns
+  Low pulse: 15.625ns
+  Low pulse limit: 0.798ns (Tcl)
+  Physical resource: counter_map/reg<0>/CLK
+  Logical resource: counter_map/reg_0/CK
+  Location pin: SLICE_X17Y77.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 29.654ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 31.250ns
+  High pulse: 15.625ns
+  High pulse limit: 0.798ns (Tch)
+  Physical resource: counter_map/reg<0>/CLK
+  Logical resource: counter_map/reg_0/CK
+  Location pin: SLICE_X17Y77.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 29.654ns (period - min period limit)
+  Period: 31.250ns
+  Min period limit: 1.596ns (626.566MHz) (Tcp)
+  Physical resource: counter_map/reg<0>/CLK
+  Logical resource: counter_map/reg_0/CK
+  Location pin: SLICE_X17Y77.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.351|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 300 paths, 0 nets, and 48 connections
+
+Design statistics:
+   Minimum period:   4.351ns{1}   (Maximum frequency: 229.832MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Oct 23 09:56:11 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 342 MB
+
+
+

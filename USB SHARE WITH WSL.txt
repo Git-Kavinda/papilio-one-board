@@ -1,0 +1,10 @@
+in powershell in administrative mode:
+usbipd list
+usbipd bind --busid 4-4
+usbipd attach --wsl --busid 2-8
+
+in WSL:
+unset LD_LIBRARY_PATH
+apt policy libusb-1.0-0
+
+papilio-loader-gui

@@ -1,0 +1,4 @@
+vhdl work "../Counter/src/seg_cont.vhd"
+vhdl work "../Counter/src/LED_cont.vhd"
+vhdl work "../Counter/src/counter.vhd"
+vhdl work "../Counter/src/top.vhd"

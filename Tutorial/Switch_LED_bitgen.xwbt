@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/mnt/b/ACCMT-Projects/papilio-one-board/Tutorial/Switch_LED.ncd
+OUTFILE=/mnt/b/ACCMT-Projects/papilio-one-board/Tutorial/Switch_LED.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4vq100
+WORKINGDIR=/mnt/b/ACCMT-Projects/papilio-one-board/Tutorial
+LICENSE=WebPack
+USER_INFO=__0_0_0

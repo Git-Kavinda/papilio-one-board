@@ -1,0 +1,33 @@
+# Crystal Clock - use 32MHz onboard oscillator
+NET "clk" LOC = "P89" | IOSTANDARD = LVCMOS25 | PERIOD = 31.25ns ;
+# Wing1 Column A
+NET "seg_en" LOC = "P18" ; # LogicStart 7Seg anode(0)
+NET "E" LOC = "P33" ; # LogicStart 7seg segment E
+NET "F" LOC = "P35" ; # LogicStart 7seg segment F
+NET "C" LOC = "P40" ; # LogicStart 7seg segment C
+NET "D" LOC = "P53" ; # LogicStart 7seg segment D
+NET "A" LOC = "P57" ; # LogicStart 7seg segment A
+NET "G" LOC = "P62" ; # LogicStart 7seg segment G
+NET "B" LOC = "P65" ; # LogicStart 7seg segment B
+
+NET "reset" LOC = "P4" ; # reset
+
+NET "LED<0>" LOC = "P5" ; # LogicStart LED 7
+NET "LED<1>" LOC = "P9" ; # LogicStart LED 6
+NET "LED<2>" LOC = "P10" ; # LogicStart LED 5
+NET "LED<3>" LOC = "P11" ; # LogicStart LED 4
+NET "LED<4>" LOC = "P12" ; # LogicStart LED 3
+NET "LED<5>" LOC = "P15" ; # LogicStart LED 2
+NET "LED<6>" LOC = "P16" ; # LogicStart LED 1
+#NET "LED<7>" LOC = "P17" ; # LogicStart LED 0
+
+#Pull down neccsory connections
+NET "LED[*]" PULLDOWN;
+NET "A" PULLDOWN;
+NET "B" PULLDOWN;
+NET "C" PULLDOWN;
+NET "D" PULLDOWN;
+NET "E" PULLDOWN;
+NET "F" PULLDOWN;
+NET "G" PULLDOWN;
+

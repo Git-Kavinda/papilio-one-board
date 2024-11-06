@@ -8,5 +8,17 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/LED_cont.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/seg_cont.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/top.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

@@ -1,8 +1,8 @@
-AR led_cont led_cont_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/LED_cont.vhd sub00/vhpl03 1729657252
-AR top top_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/top.vhd sub00/vhpl07 1729657254
-EN led_cont NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/LED_cont.vhd sub00/vhpl02 1729657251
-EN seg_cont NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/seg_cont.vhd sub00/vhpl00 1729657249
-EN top NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/top.vhd sub00/vhpl06 1729657253
-EN counter NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/counter.vhd sub00/vhpl04 1729657247
-AR seg_cont seg_cont_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/seg_cont.vhd sub00/vhpl01 1729657250
-AR counter counter_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/counter.vhd sub00/vhpl05 1729657248
+AR led_cont led_cont_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/LED_cont.vhd sub00/vhpl03 1729742818
+AR top top_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/top.vhd sub00/vhpl07 1729742820
+EN led_cont NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/LED_cont.vhd sub00/vhpl02 1729742817
+EN seg_cont NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/seg_cont.vhd sub00/vhpl00 1729742815
+EN top NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/top.vhd sub00/vhpl06 1729742819
+EN counter NULL /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/counter.vhd sub00/vhpl04 1729742813
+AR seg_cont seg_cont_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/seg_cont.vhd sub00/vhpl01 1729742816
+AR counter counter_arch /mnt/b/ACCMT-Projects/papilio-one-board/Counter/src/counter.vhd sub00/vhpl05 1729742814

@@ -20,7 +20,6 @@ begin
     begin
         if reset = '1' then 
             reg <= (others => '0');
-            --clk_10_signal <= '0';
         elsif rising_edge(clk) then 
             reg <= std_logic_vector(unsigned(reg) + 1);
         end if;
@@ -32,7 +31,7 @@ begin
             clk_10_signal <= not clk_10_signal;
         end if;
     end process gen_process;
-	 
-	 clk_10 <= clk_10_signal;
+	
+	clk_10 <= clk_10_signal;
 	 
 end architecture counter_arch;

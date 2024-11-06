@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : vq100
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Oct 23 09:54:50 2024
+Mapped Date    : Thu Oct 24 09:37:55 2024
 
 Design Summary
 --------------
@@ -38,8 +38,8 @@ Logic Distribution:
 Average Fanout of Non-Clock Nets:                2.67
 
 Peak Memory Usage:  566 MB
-Total REAL time to MAP completion:  14 secs 
-Total CPU time to MAP completion:   8 secs 
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 
@@ -112,8 +112,6 @@ WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp G is
 Section 3 - Informational
 -------------------------
 INFO:MapLib:562 - No environment variables are currently set.
-INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
-   through input buffer.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.

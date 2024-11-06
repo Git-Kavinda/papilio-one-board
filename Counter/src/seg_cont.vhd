@@ -22,15 +22,15 @@ begin
             end if;
         end if;
     end process cont_proc;
-        
+ 
     -- Seven segment display outputs for numbers 0-9
     -- Active high signals
-    A <= '1' when (count = 0 or count = 2 or count = 3 or count = 5 or count = 6 or count = 7 or count = 8 or count = 9) else '0';
-    B <= '1' when (count = 0 or count = 1 or count = 2 or count = 3 or count = 4 or count = 7 or count = 8 or count = 9) else '0';
-    C <= '1' when (count = 0 or count = 1 or count = 3 or count = 4 or count = 5 or count = 6 or count = 7 or count = 8 or count = 9) else '0';
-    D <= '1' when (count = 0 or count = 2 or count = 3 or count = 5 or count = 6 or count = 8) else '0';
+    A <= '0' when (count = 1 or count = 4) else '1';
+    B <= '0' when (count = 5 or count = 6 ) else '1';
+    C <= '0' when (count = 2 ) else '1';
+    D <= '0' when (count = 1 or count = 4 or count = 7 or count = 9) else '1';
     E <= '1' when (count = 0 or count = 2 or count = 6 or count = 8) else '0';
-    F <= '1' when (count = 0 or count = 4 or count = 5 or count = 6 or count = 8 or count = 9) else '0';
-    G <= '1' when (count = 2 or count = 3 or count = 4 or count = 5 or count = 6 or count = 8 or count = 9) else '0';
+    F <= '0' when (count = 1 or count = 2 or count = 3 or count = 7) else '1';
+    G <= '0' when (count = 1 or count = 7 or count = 0) else '1';
 
-end architecture seg_cont_arch;
+end architecture seg_cont_arch; 
